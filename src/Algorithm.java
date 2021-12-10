@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -7,10 +9,19 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        String result = algorithm1("cba", "abcd");
+        List<String[]> testCaseList = new LinkedList<>();
+        testCaseList.add(new String[]{"cba", "abcd"});
+        testCaseList.add(new String[]{"vuiebfa", "ngbvwreiusbvkusehfkjehukw"});
+        testCaseList.add(new String[]{"pwjvnx", "vhuiswfhvckqehcksajvgbkqwbsakjbcjbcj"});
+        testCaseList.add(new String[]{"xzosj", "xcjizoxcjoosd"});
+        testCaseList.add(new String[]{"qcgsx", "qwfdcwscxzcfpsfqwqsazx"});
+        testCaseList.add(new String[]{"podsbvjk", "ipzocvzivoxpuiocxvahjksfqwvb"});
+        testCaseList.add(new String[]{"qdkpvxyiz", "zxcumioiozvumynuoibpadpwqxzqzd"});
 
-        System.out.printf(result);
-
+        for (String[] testCase : testCaseList) {
+            String result = algorithm1(testCase[0], testCase[1]);
+            System.out.println(result);
+        }
     }
 
     /**
